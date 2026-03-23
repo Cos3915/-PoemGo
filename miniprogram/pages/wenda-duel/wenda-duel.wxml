@@ -1,0 +1,48 @@
+<view class="container">
+  <image class="background" src="/img/xifangsj/xfduijuebg.png" mode="aspectFill"></image>
+  
+  <view class="header">
+    <view class="player-info">
+      <image class="player-avatar" src="{{opponentAvatar}}" mode="aspectFill"></image>
+      <text class="player-name">{{opponentName}}</text>
+      <text class="player-score">{{opponentScore}}</text>
+    </view>
+    
+    <view class="round-info">
+      <text class="round-text">第{{currentRound}}轮</text>
+    </view>
+    
+    <view class="player-info my-info">
+      <image class="player-avatar" src="{{myAvatar}}" mode="aspectFill"></image>
+      <text class="player-name">{{myName}}</text>
+      <text class="player-score">{{myScore}}</text>
+    </view>
+  </view>
+  
+  <view class="content-container">
+    
+    <view class="question-card">
+      <text class="question-text">{{currentQuestion.question}}</text>
+      <view class="options-container">
+        <view wx:for="{{currentQuestion.options}}" wx:key="index" class="option-item" bindtap="onSelectOption" data-option="{{item}}">
+          <text class="option-label">{{item.label}}</text>
+          <text class="option-text">{{item.text}}</text>
+        </view>
+      </view>
+    </view>
+    
+    <view wx:if="{{showResult}}" class="result-container">
+      <text class="result-text">{{resultText}}</text>
+      <button class="next-btn" bindtap="nextRound">下一题</button>
+    </view>
+  </view>
+  
+  <view wx:if="{{showGameResult}}" class="result-overlay">
+    <image class="result-background" src="/img/jieguo.png" mode="aspectFit"></image>
+    <view class="result-content">
+      <text class="result-title">对决结果</text>
+      <text class="result-message">{{gameResultMessage}}</text>
+      <button class="result-btn" bindtap="onResultConfirm">确定</button>
+    </view>
+  </view>
+</view>

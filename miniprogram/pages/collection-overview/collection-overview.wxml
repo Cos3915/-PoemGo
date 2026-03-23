@@ -1,0 +1,22 @@
+<view class="container">
+    <image class="background" src="/img/wodeshijiebg.png" mode="aspectFill"></image>
+  
+    <view class="header">
+      <view class="back-btn" bindtap="goBack">
+        <text class="back-icon">←</text>
+      </view>
+      <text class="page-title">我的收藏</text>
+    </view>
+  
+  <view class="collection-list">
+    <view class="collection-item" wx:for="{{collections}}" wx:key="id" bindtap="goToPoetryDetail" data-item="{{item}}">
+      <image class="collection-image" src="{{item.image}}"></image>
+      <view class="collection-info">
+        <text class="collection-title">{{item.title}}</text>
+        <text class="collection-author">{{item.author}}</text>
+        <text class="collection-type">{{item.type === 'chinese' ? '华夏诗歌' : '西方诗歌'}}</text>
+      </view>
+      <text class="collection-arrow">→</text>
+    </view>
+  </view>
+</view>

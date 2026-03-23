@@ -1,0 +1,24 @@
+<view class="container">
+  <image class="background" src="{{isWestern ? '/img/xifangsj/xifangjiansuobg.jpg' : '/img/huaxiasj/huaxiajinasuobg.png'}}" mode="aspectFill"></image>
+  <view class="overlay"></view>
+  
+  <view class="header">
+    <view class="back-btn" bindtap="goBack">
+      <text class="back-icon">←</text>
+    </view>
+    <text class="title">诗词详情</text>
+  </view>
+  
+  <view class="content">
+    <view class="title-row">
+      <view class="collect-btn" bindtap="toggleCollect">
+        <text class="collect-icon {{isCollected ? 'collected' : ''}}">★</text>
+      </view>
+      <text class="poetry-title">{{poetry.title || poetry.rhythmic}}</text>
+    </view>
+    <text class="poetry-author">{{poetry.author}}</text>
+    <view class="poetry-content">
+      <text wx:for="{{poetry.lines || poetry.paragraphs}}" wx:key="index">{{item}}\n</text>
+    </view>
+  </view>
+</view>

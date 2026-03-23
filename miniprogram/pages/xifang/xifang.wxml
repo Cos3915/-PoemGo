@@ -1,0 +1,28 @@
+<view class="container">
+  <image class="background" src="{{background}}" mode="aspectFill" binderror="onImageError"></image>
+  
+  <image class="component top-item zhishiwenda" src="{{zhishiwenda}}" mode="aspectFit" binderror="onImageError"></image>
+  <image class="component top-item saiqian" src="{{saiqian}}" mode="aspectFit" binderror="onImageError"></image>
+  
+  <view class="click-area zhishiwenda-click" bindtap="onStartMatch" data-match-type="知识问答"></view>
+  <view class="click-area saiqian-click" bindtap="goToPractice"></view>
+  
+  <image class="component orange-gradient" src="{{orangeGradient}}" mode="aspectFill" binderror="onImageError"></image>
+  <image class="component huaxia-world" src="{{huaxiaWorld}}" mode="aspectFit" binderror="onImageError"></image>
+  <image class="component knowledge-search" src="{{knowledgeSearch}}" mode="aspectFit" binderror="onImageError"></image>
+  <image class="component ai-dialog" src="{{aiDialog}}" mode="aspectFit" binderror="onImageError"></image>
+  <image class="component my-world" src="{{myWorld}}" mode="aspectFit" binderror="onImageError"></image>
+  
+  <view class="click-area huaxia-world-click" bindtap="goToHuaxia"></view>
+  <view class="click-area knowledge-search-click" bindtap="goToKnowledgeSearch"></view>
+  <view class="click-area my-world-click" bindtap="goToMyWorld"></view>
+  
+  <match-window 
+    show="{{showMatchWindow}}" 
+    match-type="{{currentMatchType}}"
+    my-account="{{myAccount}}"
+    my-avatar="{{myAvatar}}"
+    bindmatch-success="onMatchSuccess"
+    bindcancel="onCancelMatch">
+  </match-window>
+</view>

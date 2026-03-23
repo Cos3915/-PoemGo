@@ -1,0 +1,109 @@
+.container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.component {
+  position: absolute;
+  z-index: 10;
+}
+
+.top-item {
+  top: 0rpx;
+  width: 50%;
+  height: 350rpx;
+}
+
+.zhishiwenda {
+  left: 8%;
+}
+
+.saiqian {
+  left: 30%;
+}
+
+.orange-gradient {
+  width: 100%;
+  height: 300rpx;
+  bottom: 0;
+  left: 0;
+  z-index: 5;
+}
+
+.huaxia-world, .knowledge-search, .ai-dialog, .my-world {
+  bottom: 60rpx;
+}
+
+.huaxia-world {
+  width: 30%;
+  height: 240rpx;
+  left: 0%;
+}
+
+.knowledge-search {
+  width: 20%;
+  height: 150rpx;
+  left: 31%;
+}
+
+.ai-dialog {
+  width: 55%;
+  height: 250rpx;
+  left: 40%;
+}
+
+.my-world {
+  width: 30%;
+  height: 260rpx;
+  left: 72%;
+}
+
+.click-area {
+  position: absolute;
+  z-index: 20;
+  background-color: transparent;
+}
+
+.huaxia-world-click {
+  width: 30%;
+  height: 300rpx;
+  left: 0%;
+  bottom: 60rpx;
+}
+
+.zhishiwenda-click {
+  width: 50%;
+  height: 350rpx;
+  top: 0rpx;
+  left: 8%;
+}
+
+.saiqian-click {
+  width: 50%;
+  height: 350rpx;
+  top: 0rpx;
+  left: 50%;
+}
+
+.knowledge-search-click {
+  width: 20%;
+  height: 150rpx;
+  left: 31%;
+  bottom: 60rpx;
+}
+
+.my-world-click {
+  width: 30%;
+  height: 260rpx;
+  left: 72%;
+  bottom: 60rpx;
+}

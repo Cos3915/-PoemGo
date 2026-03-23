@@ -1,0 +1,40 @@
+<view class="container">
+  <image class="background" src="/img/huaxiasj/hxduijuebg.png" mode="aspectFill"></image>
+  
+  <view class="header">
+    <view class="player-info">
+      <image class="player-avatar" src="{{opponentAvatar}}" mode="aspectFill"></image>
+      <text class="player-name">{{opponentName}}</text>
+    </view>
+    
+    <view class="score-board">
+      <text class="token-text">令牌：{{currentToken}}</text>
+      <text class="countdown-text">{{countdown}}秒</text>
+    </view>
+    
+    <view class="player-info my-info">
+      <image class="player-avatar" src="{{myAvatar}}" mode="aspectFill"></image>
+      <text class="player-name">{{myName}}</text>
+    </view>
+  </view>
+  
+  <view class="chat-container">
+    <view wx:for="{{chatMessages}}" wx:key="id" class="message-item {{item.type}}">
+      <text class="message-content">{{item.content}}</text>
+    </view>
+  </view>
+  
+  <view class="input-container">
+    <input class="input-field" placeholder="输入诗句..." value="{{inputValue}}" bindinput="onInputChange"></input>
+    <button class="send-btn" bindtap="onSend">发送</button>
+  </view>
+  
+  <view wx:if="{{showResult}}" class="result-overlay">
+    <image class="result-background" src="/img/jieguo.png" mode="aspectFit"></image>
+    <view class="result-content">
+      <text class="result-title">对决结果</text>
+      <text class="result-message">{{resultMessage}}</text>
+      <button class="result-btn" bindtap="onResultConfirm">确定</button>
+    </view>
+  </view>
+</view>

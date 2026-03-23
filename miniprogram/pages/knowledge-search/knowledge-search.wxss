@@ -1,0 +1,136 @@
+.container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  font-family: 'Noto Serif SC', serif;
+  overflow: hidden;
+}
+
+.background {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.header {
+  position: relative;
+  padding: 100rpx 20rpx 20rpx;
+  display: flex;
+  align-items: center;
+  z-index: 10;
+}
+
+.back-btn {
+  width: 60rpx;
+  height: 60rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 30rpx;
+  margin-right: 30rpx;
+}
+
+.back-icon {
+  font-size: 36rpx;
+  color: #333;
+}
+
+.title {
+  font-size: 40rpx;
+  font-weight: bold;
+  color: #333;
+  flex: 1;
+  text-align: center;
+}
+
+.content-container {
+  position: absolute;
+  top: 200rpx;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow-y: auto;
+  z-index: 10;
+}
+
+.search-container {
+  position: relative;
+  padding: 60rpx 20rpx 20rpx;
+  z-index: 10;
+}
+
+.search-input {
+  width: 500rpx;
+  height: 80rpx;
+  border: 2rpx solid #ccc;
+  border-radius: 40rpx;
+  padding: 0 30rpx;
+  font-size: 28rpx;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.search-btn {
+  width: 115rpx !important;
+  height: 70rpx !important;
+  border-radius: 35rpx;
+  background-color: #80a8a8;
+  color: white;
+  font-size: 25rpx;
+  border: none;
+  margin-left: 20rpx;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-results {
+  position: relative;
+  padding: 20rpx;
+  z-index: 10;
+}
+
+.section-title {
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20rpx;
+  text-align: center;
+}
+
+.result-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 20rpx;
+  padding: 30rpx;
+  margin-bottom: 20rpx;
+  border: 2rpx solid rgba(128, 168, 168, 0.3);
+}
+
+.result-title {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #333;
+  display: block;
+  margin-bottom: 15rpx;
+  text-align: center;
+}
+
+.result-author {
+  font-size: 26rpx;
+  color: #666;
+  display: block;
+  margin-bottom: 20rpx;
+  text-align: center;
+}
+
+.result-content {
+  font-size: 28rpx;
+  color: #555;
+  line-height: 1.8;
+  display: block;
+  text-align: center;
+}

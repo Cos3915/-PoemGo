@@ -1,0 +1,78 @@
+<view class="container">
+  <image class="background" src="/img/wodeshijiebg.png" mode="aspectFill"></image>
+  
+  <view class="header">
+    <view class="back-btn" bindtap="goBack">
+      <text class="back-icon">←</text>
+    </view>
+    <text class="page-title">我的诗界</text>
+  </view>
+  
+  <!-- 个人信息卡片 -->
+  <view class="profile-card">
+    <image class="avatar" src="{{userInfo.avatar}}"></image>
+    <view class="profile-info">
+      <text class="nickname">{{userInfo.nickname}}</text>
+      <text class="level">诗界旅人</text>
+      <view class="level-bar">
+        <view class="level-progress" style="width: 60%"></view>
+      </view>
+      <text class="level-text">Lv.12</text>
+    </view>
+  </view>
+  
+  <!-- 统计数据 -->
+  <view class="stats-card">
+    <view class="stat-item">
+      <text class="stat-value">{{totalMatches}}</text>
+      <text class="stat-label">对决场次</text>
+    </view>
+    <view class="stat-item">
+      <text class="stat-value">{{totalWins}}</text>
+      <text class="stat-label">获胜场次</text>
+    </view>
+    <view class="stat-item">
+      <text class="stat-value">{{winRate}}%</text>
+      <text class="stat-label">胜率</text>
+    </view>
+  </view>
+  
+  <!-- 功能卡片 -->
+  <view class="function-cards">
+    <view class="function-card" bindtap="goToRecords">
+      <view class="card-icon trophy-icon"></view>
+      <view class="card-content">
+        <text class="card-title">我的战绩</text>
+        <text class="card-description">参与诗词对决共{{totalMatches}}场，胜率{{winRate}}%</text>
+      </view>
+      <text class="card-arrow">→</text>
+    </view>
+    
+    <view class="function-card" bindtap="goToCollections">
+      <view class="card-icon book-icon"></view>
+      <view class="card-content">
+        <text class="card-title">我的收藏</text>
+        <text class="card-description">珍藏佳作{{collections.length}}首</text>
+      </view>
+      <text class="card-arrow">→</text>
+    </view>
+    
+    <view class="function-card" bindtap="goToSpirits">
+      <view class="card-icon spirit-icon"></view>
+      <view class="card-content">
+        <text class="card-title">我的诗灵</text>
+        <text class="card-description">诗歌拟人，诗界伙伴</text>
+      </view>
+      <text class="card-arrow">→</text>
+    </view>
+    
+    <view class="function-card" bindtap="goToSettings">
+      <view class="card-icon settings-icon"></view>
+      <view class="card-content">
+        <text class="card-title">设置</text>
+        <text class="card-description">账户管理，隐私设置</text>
+      </view>
+      <text class="card-arrow">→</text>
+    </view>
+  </view>
+</view>

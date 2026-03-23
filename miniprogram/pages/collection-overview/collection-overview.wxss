@@ -1,0 +1,98 @@
+.container {
+  padding: 20rpx;
+  min-height: 100vh;
+  position: relative;
+  font-family: "Noto Serif SC", serif;
+}
+
+.background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0.8;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 30rpx;
+  padding-top: 80rpx;
+}
+
+.back-btn {
+  width: 60rpx;
+  height: 60rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 30rpx;
+  margin-right: 30rpx;
+}
+
+.back-icon {
+  font-size: 36rpx;
+  color: #333;
+}
+
+.page-title {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #333;
+}
+
+.collection-list {
+  margin-top: 20rpx;
+}
+
+.collection-item {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  padding: 20rpx;
+  border-radius: 15rpx;
+  margin-bottom: 20rpx;
+  box-shadow: 0 4rpx 15rpx rgba(0, 0, 0, 0.1);
+}
+
+.collection-image {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 10rpx;
+  margin-right: 20rpx;
+}
+
+.collection-info {
+  flex: 1;
+}
+
+.collection-title {
+  font-size: 32rpx;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 8rpx;
+  color: #333;
+}
+
+.collection-author {
+  font-size: 24rpx;
+  color: #666;
+  display: block;
+  margin-bottom: 8rpx;
+}
+
+.collection-type {
+  font-size: 20rpx;
+  color: #3498db;
+  background-color: #e3f2fd;
+  padding: 6rpx 12rpx;
+  border-radius: 15rpx;
+}
+
+.collection-arrow {
+  font-size: 28rpx;
+  color: #999;
+}

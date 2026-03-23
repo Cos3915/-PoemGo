@@ -1,0 +1,3 @@
+<view class="container" bindtap="onLogin">
+  <image class="splash-image" src="{{splashImage}}" mode="aspectFill" binderror="onImageError"></image>
+</view>

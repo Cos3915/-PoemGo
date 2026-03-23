@@ -1,0 +1,7 @@
+{
+  "navigationStyle": "custom",
+  "disableScroll": true,
+  "usingComponents": {
+    "match-window": "/components/matchWindow/matchWindow"
+  }
+}

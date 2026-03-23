@@ -1,0 +1,33 @@
+{
+  "pages": [
+    "pages/splash/splash",
+    "pages/huaxia/huaxia",
+    "pages/xifang/xifang",
+    "pages/my-world/my-world",
+    "pages/collection-overview/collection-overview",
+    "pages/record-overview/record-overview",
+    "pages/spirit-list/spirit-list",
+    "pages/spirit-detail/spirit-detail",
+    "pages/duel/duel",
+    "pages/feihua-duel/feihua-duel",
+    "pages/tiankong-duel/tiankong-duel",
+    "pages/wenda-duel/wenda-duel",
+    "pages/knowledge-search/knowledge-search",
+    "pages/xifang-search/xifang-search",
+    "pages/poetry-detail/poetry-detail",
+    "pages/huaxia-practice/huaxia-practice",
+    "pages/xifang-practice/xifang-practice",
+    "pages/index/index",
+    "pages/example/index"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "云开发 QuickStart",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2",
+  "lazyCodeLoading": "requiredComponents"
+}

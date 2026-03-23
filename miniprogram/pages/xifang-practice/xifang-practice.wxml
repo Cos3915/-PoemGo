@@ -1,0 +1,53 @@
+<view class="container">
+  <image class="background" src="/img/xifangsj/xfduijuebg.png" mode="aspectFill"></image>
+  
+  <view class="header">
+    <view class="player-info">
+      <image class="player-avatar" src="{{opponentAvatar}}" mode="aspectFill"></image>
+      <text class="player-name">{{opponentNickname}}</text>
+      <text class="player-score">{{opponentScore}}</text>
+    </view>
+    
+    <view class="round-info">
+      <text class="round-text">第{{currentRound}}轮</text>
+    </view>
+    
+    <view class="player-info my-info">
+      <image class="player-avatar" src="{{myAvatar}}" mode="aspectFill"></image>
+      <text class="player-name">{{myNickname}}</text>
+      <text class="player-score">{{myScore}}</text>
+    </view>
+  </view>
+  
+  <view class="content-container">
+    
+    <view class="question-card">
+      <text class="question-text">{{currentQuestion.question}}</text>
+      <view class="options-container">
+        <view wx:for="{{currentQuestion.options}}" wx:key="index" class="option-item {{selectedOption === item.label ? 'selected' : ''}}" bindtap="onSelectOption" data-option="{{item.label}}">
+          <text class="option-label">{{item.label}}</text>
+          <text class="option-text">{{item.text}}</text>
+        </view>
+      </view>
+    </view>
+    
+    <view wx:if="{{showResult}}" class="result-container">
+      <text class="result-text">{{resultText}}</text>
+      <button class="next-btn" bindtap="nextRound">下一题</button>
+    </view>
+    
+    <view wx:if="{{!showResult}}" class="button-container">
+      <button class="exit-btn" bindtap="onExit">退出练习</button>
+    </view>
+  </view>
+  
+  <view class="exit-confirm" wx:if="{{showExitConfirm}}">
+    <view class="confirm-content">
+      <text class="confirm-text">确定要退出练习吗？</text>
+      <view class="confirm-buttons">
+        <view class="confirm-btn cancel" bindtap="cancelExit">取消</view>
+        <view class="confirm-btn confirm" bindtap="confirmExit">确定</view>
+      </view>
+    </view>
+  </view>
+</view>

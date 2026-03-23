@@ -1,0 +1,24 @@
+<view class="container">
+    <image class="background" src="/img/wodeshijiebg.png" mode="aspectFill"></image>
+  
+    <view class="header">
+      <view class="back-btn" bindtap="goBack">
+        <text class="back-icon">←</text>
+      </view>
+      <text class="page-title">诗灵介绍</text>
+    </view>
+  
+  <view class="spirit-card">
+    <image class="spirit-image" src="{{spirit.image}}"></image>
+    <text class="spirit-name">{{spirit.name}}</text>
+    <text class="spirit-info" wx:if="{{spirit.gender}}">{{spirit.gender}} | {{spirit.personality}}</text>
+    <view class="spirit-description">
+      <text>{{spirit.description}}</text>
+    </view>
+    <view class="spirit-poem" wx:if="{{spirit.poem}}">
+      <text class="poem-title">代表诗歌</text>
+      <text class="poem-author">{{spirit.author}}</text>
+      <text class="poem-content">{{spirit.poem}}</text>
+    </view>
+  </view>
+</view>

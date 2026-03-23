@@ -1,0 +1,104 @@
+<view class="container">
+    <image class="background" src="/img/wodeshijiebg.png" mode="aspectFill"></image>
+  
+    <view class="header">
+      <view class="back-btn" bindtap="goBack">
+        <text class="back-icon">←</text>
+      </view>
+      <text class="page-title">我的战绩</text>
+    </view>
+  
+  <!-- 总战绩统计 -->
+  <view class="total-stats">
+    <view class="stat-item">
+      <text class="stat-value">{{totalMatches}}</text>
+      <text class="stat-label">总场次</text>
+    </view>
+    <view class="stat-item">
+      <text class="stat-value">{{totalWins}}</text>
+      <text class="stat-label">总胜场</text>
+    </view>
+    <view class="stat-item">
+      <text class="stat-value">{{winRate}}%</text>
+      <text class="stat-label">胜率</text>
+    </view>
+  </view>
+  
+  <!-- 飞花令战绩 -->
+  <view class="record-section">
+    <view class="section-title">飞花令</view>
+    <view class="record-stats">
+      <view class="stat-item">
+        <text class="stat-value">{{records.feihua.wins}}</text>
+        <text class="stat-label">胜场</text>
+      </view>
+      <view class="stat-item">
+        <text class="stat-value">{{records.feihua.total}}</text>
+        <text class="stat-label">总场次</text>
+      </view>
+      <view class="stat-item">
+        <text class="stat-value">{{records.feihua.winRate}}%</text>
+        <text class="stat-label">胜率</text>
+      </view>
+    </view>
+    <view class="recent-records">
+      <view class="record-item" wx:for="{{records.feihua.recent}}" wx:key="index">
+        <text class="record-date">{{item.date}}</text>
+        <text class="record-result {{item.result === '胜利' ? 'win' : 'lose'}}">{{item.result}}</text>
+        <text class="record-score">{{item.score}}</text>
+      </view>
+    </view>
+  </view>
+  
+  <!-- 诗词填空战绩 -->
+  <view class="record-section">
+    <view class="section-title">诗词填空</view>
+    <view class="record-stats">
+      <view class="stat-item">
+        <text class="stat-value">{{records.tiankong.wins}}</text>
+        <text class="stat-label">胜场</text>
+      </view>
+      <view class="stat-item">
+        <text class="stat-value">{{records.tiankong.total}}</text>
+        <text class="stat-label">总场次</text>
+      </view>
+      <view class="stat-item">
+        <text class="stat-value">{{records.tiankong.winRate}}%</text>
+        <text class="stat-label">胜率</text>
+      </view>
+    </view>
+    <view class="recent-records">
+      <view class="record-item" wx:for="{{records.tiankong.recent}}" wx:key="index">
+        <text class="record-date">{{item.date}}</text>
+        <text class="record-result {{item.result === '胜利' ? 'win' : 'lose'}}">{{item.result}}</text>
+        <text class="record-score">{{item.score}}</text>
+      </view>
+    </view>
+  </view>
+  
+  <!-- 知识问答战绩 -->
+  <view class="record-section">
+    <view class="section-title">知识问答</view>
+    <view class="record-stats">
+      <view class="stat-item">
+        <text class="stat-value">{{records.wenda.wins}}</text>
+        <text class="stat-label">胜场</text>
+      </view>
+      <view class="stat-item">
+        <text class="stat-value">{{records.wenda.total}}</text>
+        <text class="stat-label">总场次</text>
+      </view>
+      <view class="stat-item">
+        <text class="stat-value">{{records.wenda.winRate}}%</text>
+        <text class="stat-label">胜率</text>
+      </view>
+    </view>
+    <view class="recent-records">
+      <view class="record-item" wx:for="{{records.wenda.recent}}" wx:key="index">
+        <text class="record-date">{{item.date}}</text>
+        <text class="record-result {{item.result === '胜利' ? 'win' : 'lose'}}">{{item.result}}</text>
+        <text class="record-score">{{item.score}}</text>
+      </view>
+    </view>
+  </view>
+</view>

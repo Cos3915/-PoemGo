@@ -1,0 +1,29 @@
+<view class="container">
+  <image class="background" src="/img/huaxiasj/huaxiajinasuobg.png" mode="aspectFill"></image>
+  
+  <view class="header">
+    <view class="back-btn" bindtap="goBack">
+      <text class="back-icon">←</text>
+    </view>
+    <text class="title">诗词检索</text>
+  </view>
+  
+  <view class="content-container">
+    <view class="search-container">
+      <view style="display: flex; align-items: center;">
+        <input class="search-input" placeholder="输入诗人或关键词..." value="{{searchKeyword}}" bindinput="onSearchInput"></input>
+        <button class="search-btn" bindtap="onSearch">搜索</button>
+      </view>
+    </view>
+    
+    
+    <view wx:if="{{searchResults.length > 0}}" class="search-results">
+      <text class="section-title">搜索结果</text>
+      <view wx:for="{{searchResults}}" wx:key="*this" class="result-item" bindtap="onResultTap" data-author="{{item.author}}" data-title="{{item.title || item.rhythmic}}" data-content="{{item.paragraphs}}">
+        <text class="result-title">{{item.title || item.rhythmic}}</text>
+        <text class="result-author">{{item.author}}</text>
+        <text class="result-content">{{item.paragraphs.join('\n')}}</text>
+      </view>
+    </view>
+  </view>
+</view>

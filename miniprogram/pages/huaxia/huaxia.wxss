@@ -1,0 +1,120 @@
+.container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.component {
+  position: absolute;
+  z-index: 10;
+}
+
+.top-item {
+  top: 0rpx;
+  width: 50%;
+  height: 350rpx;
+}
+
+.feihua {
+  left: 4%;
+}
+
+.shici {
+  left: 25%;
+}
+
+.saiqian {
+  left: 45%;
+}
+
+.blue-gradient {
+  width: 100%;
+  height: 300rpx;
+  bottom: 0;
+  left: 0;
+  z-index: 5;
+}
+
+.west-world, .knowledge-search, .ai-dialog, .my-world {
+  bottom: 60rpx;
+}
+
+.west-world {
+  width: 30%;
+  height: 300rpx;
+  left: 0%;
+}
+
+.knowledge-search {
+  width: 20%;
+  height: 150rpx;
+  left: 29%;
+}
+
+.ai-dialog {
+  width: 55%;
+  height: 250rpx;
+  left: 34%;
+}
+
+.my-world {
+  width: 30%;
+  height: 130rpx;
+  left: 72%;
+}
+
+.click-area {
+  position: absolute;
+  z-index: 20;
+  background-color: transparent;
+}
+
+.west-world-click {
+  width: 30%;
+  height: 300rpx;
+  left: 0%;
+  bottom: 60rpx;
+}
+
+.feihua-click {
+  width: 50%;
+  height: 350rpx;
+  top: 0rpx;
+  left: 8%;
+}
+
+.shici-click {
+  width: 50%;
+  height: 350rpx;
+  top: 0rpx;
+  left: 30%;
+}
+
+.saiqian-click {
+  width: 50%;
+  height: 350rpx;
+  top: 0rpx;
+  left: 50%;
+}
+
+.knowledge-search-click {
+  width: 20%;
+  height: 150rpx;
+  left: 29%;
+  bottom: 60rpx;
+}
+
+.my-world-click {
+  width: 30%;
+  height: 130rpx;
+  left: 72%;
+  bottom: 60rpx;
+}

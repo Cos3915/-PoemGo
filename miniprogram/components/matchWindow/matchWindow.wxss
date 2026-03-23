@@ -1,0 +1,87 @@
+.match-window {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.match-bg {
+  width: 70%;
+  height: 50%;
+  position: relative;
+  border-radius: 20rpx;
+}
+
+.match-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #333333;
+  font-family: 'Noto Serif SC', serif;
+}
+
+.title {
+  font-size: 32rpx;
+  font-weight: bold;
+  margin-bottom: 40rpx;
+}
+
+.players {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40rpx;
+}
+
+.player {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.player-avatar {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  margin-bottom: 10rpx;
+  border: 2rpx solid #fff;
+}
+
+.default-avatar {
+  background-color: #ccc;
+}
+
+.player-name {
+  font-size: 28rpx;
+  margin-bottom: 10rpx;
+}
+
+.vs {
+  font-size: 36rpx;
+  font-weight: bold;
+  margin: 0 40rpx;
+}
+
+.status {
+  font-size: 24rpx;
+  margin-bottom: 30rpx;
+}
+
+.cancel-btn {
+  font-size: 24rpx;
+  color: #ff6b6b;
+  border: 1rpx solid #ff6b6b;
+  padding: 10rpx 30rpx;
+  border-radius: 20rpx;
+}

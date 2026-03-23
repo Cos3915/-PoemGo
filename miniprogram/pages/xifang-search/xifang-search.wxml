@@ -1,0 +1,29 @@
+<view class="container">
+  <image class="background" src="/img/xifangsj/xifangjiansuobg.jpg" mode="aspectFill"></image>
+  
+  <view class="header">
+    <view class="back-btn" bindtap="goBack">
+      <text class="back-icon">←</text>
+    </view>
+    <text class="title">诗歌检索</text>
+  </view>
+  
+  <view class="content-container">
+    <view class="search-container">
+      <view style="display: flex; align-items: center;">
+        <input class="search-input" placeholder="输入外语诗人名或外语诗歌标题..." value="{{searchKeyword}}" bindinput="onSearchInput"></input>
+        <button class="search-btn" bindtap="onSearch">搜索</button>
+      </view>
+    </view>
+    
+    
+    <view wx:if="{{searchResults.length >0}}" class="search-results">
+      <text class="section-title">搜索结果</text>
+      <view wx:for="{{searchResults}}" wx:key="*this" class="result-item" bindtap="onResultTap" data-author="{{item.author}}" data-title="{{item.title}}" data-content="{{item.lines.join(',')}}">
+        <text class="result-title">{{item.title}}</text>
+        <text class="result-author">{{item.author}}</text>
+        <text class="result-content">{{item.lines.join('\n')}}</text>
+      </view>
+    </view>
+  </view>
+</view>
